@@ -8,3 +8,4 @@ export const Auth0 = {
 };
 
 export const baseUrl = `https://${Auth0.domain}`;
+export const defaultPassword = "oktaHackthon@2023";

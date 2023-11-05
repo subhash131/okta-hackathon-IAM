@@ -15,6 +15,7 @@ export async function POST() {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(body),
+    cache: "no-cache",
   }).then((res) => res.json());
 
   return Response.json({ access_token: data.access_token });

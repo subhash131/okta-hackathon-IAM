@@ -2,18 +2,18 @@ import { AccountSchema } from "@/types/AccountSchema.type";
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  users: Array<AccountSchema>,
+  tmUsers: Array<AccountSchema>,
 };
 
 const userDataSlice = createSlice({
-  name: "user data",
+  name: "HR user data",
   initialState,
   reducers: {
-    updateUserData: (state, action) => {
-      state.users = action.payload;
+    updateTaskManagmentUserData: (state, action) => {
+      state.tmUsers = action.payload;
     },
   },
 });
 
 export default userDataSlice.reducer;
-export const { updateUserData } = userDataSlice.actions;
+export const { updateTaskManagmentUserData } = userDataSlice.actions;

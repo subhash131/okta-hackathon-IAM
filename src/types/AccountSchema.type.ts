@@ -3,7 +3,8 @@ export type AccountSchema = {
   accountName: string;
   givenName: string;
   familyName: string;
-  displayName: string;
+  userType: string;
   departmentId: string;
-  role: string;
+  email: string;
+  access: string;
 };
