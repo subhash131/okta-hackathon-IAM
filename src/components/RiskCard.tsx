@@ -33,7 +33,7 @@ const RiskCard = ({
                 Assigned to:{" "}
               </span>
               <span className="text-lg font-medium tracking-tighter text-gray-600 lg:text-lg">
-                {user || "dummy user"}
+                {user}
               </span>
             </p>
           </div>

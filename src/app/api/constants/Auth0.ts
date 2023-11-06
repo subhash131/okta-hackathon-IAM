@@ -7,4 +7,5 @@ export const Auth0 = {
 };
 
 export const baseUrl = `https://${Auth0.domain}`;
+// Danger: it is not recomended to hard code passwords
 export const defaultPassword = "oktaHackthon@2023";

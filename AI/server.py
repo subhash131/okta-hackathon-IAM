@@ -10,9 +10,11 @@ CORS(app)
 
 def prediction_model():
     # Load the dataset
-    df = pd.read_csv('./training_dataset.csv')
+    raw_df = pd.read_csv('./dataset.csv')
+    df = raw_df[["access","userType","anomaly"]]
+    # print(raw_df)
 
-    # Define additional rules for anomalies (userType, access)
+    #Define additional rules for anomalies (userType, access)
     manual_anomalies = [('associate', 'all'), ('manager', 'all'),('associate','create')]
 
     # Identify rows matching manual anomalies and mark them as anomalies
@@ -46,9 +48,8 @@ def prediction_model():
 
     # Print detected anomalies
     # print("Detected Anomalies:")
-    # print("Type ::", (jsonify(anomalies.to_json(orient="records"))))
-    return anomalies.to_json(orient="records")
-    # return anomalies.to_json(orient="records")
+    df2 = pd.concat([anomalies, raw_df[["name"]]], axis=1)
+    return df2.to_json(orient="records")
 
 @app.route("/predict",methods = ['GET'])
 def return_home():

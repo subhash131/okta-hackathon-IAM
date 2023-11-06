@@ -85,7 +85,6 @@ const RoleCard = ({
             if (userId === "") {
               toast.error("Please select an identity");
             } else {
-              console.log("req", { requestedFor: userId, role: id });
               const res = await fetch("http://localhost:3000/api/assignRole", {
                 body: JSON.stringify({ requestedFor: userId, role: id }),
                 method: "POST",

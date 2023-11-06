@@ -79,6 +79,7 @@ const Page = () => {
           given_name: user.givenName,
           email: user.email,
           name: user.displayName,
+          access: user.access,
         });
       });
     }

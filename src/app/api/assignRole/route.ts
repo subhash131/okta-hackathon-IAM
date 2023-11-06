@@ -20,12 +20,13 @@ export const POST = async (req: Request) => {
     },
     data: { roles: [role] },
   };
+  // console.log("options: ", options);
   var res = "";
   try {
     axios
       .request(options)
       .then(function (response: any) {
-        console.log(response.data);
+        // console.log(response.data);
         res = response.data;
       })
       .catch(function (error: any) {

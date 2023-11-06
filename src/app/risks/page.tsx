@@ -38,7 +38,7 @@ const Page = () => {
           </button>
         </div>
       </div>
-      <div className="px-4 py-2 flex flex-row gap-4">
+      <div className="px-4 py-2 flex flex-row gap-4 ">
         <button
           className={`items-center justify-center w-52 px-2 py-2.5 text-center
           ${
@@ -52,7 +52,7 @@ const Page = () => {
         >
           AI Predected
         </button>
-        <button
+        {/* <button
           className={`items-center justify-center w-52 px-2 py-2.5 text-center duration-200 ${
             selectedRisk == "Manually Configured"
               ? "bg-black text-white"
@@ -62,14 +62,11 @@ const Page = () => {
             setSelectedRisk("Manually Configured");
           }}
         >
-          Check Manually 
-        </button>
+          Check Manually
+        </button> */}
       </div>
-      {selectedRisk === "AI Predected" ? (
-        <AIPredictedRisks />
-      ) : (
-        <ManuallyPredictedRisks />
-      )}
+      {/* {selectedRisk === "AI Predected" ? ( */}
+      {true ? <AIPredictedRisks /> : <ManuallyPredictedRisks />}
     </div>
   );
 };
