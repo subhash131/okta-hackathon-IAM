@@ -1,5 +1,4 @@
 "use client";
-import Table from "@/components/Table";
 import { Loader } from "lucide-react";
 import React, { useEffect, useState } from "react";
 

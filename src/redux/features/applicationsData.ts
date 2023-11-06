@@ -30,7 +30,7 @@ const initialState = {
 };
 
 const userDataSlice = createSlice({
-  name: "HR user data",
+  name: "Application data",
   initialState,
   reducers: {
     updateApplicationsData: (state, action) => {

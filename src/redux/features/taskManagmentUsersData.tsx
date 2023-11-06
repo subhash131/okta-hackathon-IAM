@@ -6,7 +6,7 @@ const initialState = {
 };
 
 const userDataSlice = createSlice({
-  name: "HR user data",
+  name: "Task Managment user data",
   initialState,
   reducers: {
     updateTaskManagmentUserData: (state, action) => {
